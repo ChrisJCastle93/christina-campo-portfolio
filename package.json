@@ -5,7 +5,7 @@
   "main": "tailwind.config.js",
   "scripts": {
     "build-css": "tailwindcss -i ./src/tailwind.css -o ./src/css/tailwind.css -w",
-    "start": "gulp"
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,7 +17,13 @@
     "tailwindcss": "^2.2.17"
   },
   "dependencies": {
+    "body-parser": "^1.19.1",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.17.2",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-minify-cssnames": "^2.1.0"
+    "gulp-minify-cssnames": "^2.1.0",
+    "hbs": "^4.2.0",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7"
   }
 }
