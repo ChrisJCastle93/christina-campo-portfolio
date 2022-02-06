@@ -5,6 +5,8 @@ const hbs = require("hbs");
 const logger = require("morgan");
 const path = require("path");
 
+require("dotenv").config();
+
 const app = express();
 
 app.use(logger("dev"));
@@ -24,8 +26,8 @@ app.use(function (req, res, next) {
   res.status(404).render("404");
 });
 
-app.listen(3000, () => {
-    console.log(`Listening on http://localhost:3000`);
-  });
+app.listen(process.env.PORT, () => {
+    console.log(`Listening on http://localhost:${process.env.PORT}`);
+});
 
 module.exports = app;
